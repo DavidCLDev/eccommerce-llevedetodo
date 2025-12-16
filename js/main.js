@@ -1,14 +1,12 @@
-const openModal = document.querySelector('.open-login');
-const modal = document.querySelector('.container_login')
-const closemodal = document.querySelector('.cerrar-login')
+let widget = document.getElementById("menu-widget");
 
+function myFunction() {
+    widget.style.display = "block";
+}
 
-openModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.add('modal-show')
-});
-
-closemodal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.remove('modal-show')
-});
+window.onclick = function(event) {
+    let container = document.getElementById("menu-container");
+    if (!event.target.matches(".submenu-container")) {
+        widget.style.display = "none";
+    }
+}

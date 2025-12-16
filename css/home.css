@@ -1,0 +1,457 @@
+
+/*
+Header de la página
+
+Aquí se listan toods los estilos referentes al header de index.html.
+El header está divido en dos secciones: .container-principal-uno y
+.container-principal-nav.
+*/
+
+.nav-header {
+    background-color: white;
+    display: grid;
+    height: 9.375rem;
+    max-width: 100vw;
+    padding-top: 1.5625rem;
+    grid-template-rows: 50% 50%;
+    z-index: 1;
+}
+
+/*
+PRIMERA PARTE DEL HEADER
+
+Aquí van elementos como:
+
+- El logo del sitio web
+- La barra de búsqueda,
+- El botón del perfil
+- El botón del carrito
+*/
+
+.container-principal-uno {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Logo del sitio web */
+
+.logo {
+    margin-left: 20px;
+    height: 80%;
+}
+
+/* Barra de navegación */
+
+.input-bar {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3.125rem 0 0 3.125rem;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+
+.input-bar:focus {
+    outline: none;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: auto 70px;
+    height: 70%;
+    width: 610px;
+    align-items: center;
+    background-color: white;
+    border-radius: 3.125rem;
+    border: .0625rem solid #2f2f2f;
+}
+
+.btn-search {
+    position: relative;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    background-color: #222222;
+}
+
+/*  Estilo de Botones del perfil y del carrito */
+
+.main-button {
+    width: 100%;
+    height: 90%;
+    border: none;
+    background-color: white;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button:hover {
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.main-button-container {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: none;
+}
+
+.icon {
+    margin: auto;
+}
+
+.icon-text {
+    font-size: 1rem;
+}
+
+/* Menú de usuario desplegable */
+
+.user-menu-widget {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    width: 300px;
+    border-radius: 10px;
+    height: 570px;
+    transform: translateX(-50%);
+    background-color: white;
+    /* Atributo que controla la visibilidad del menú del perfil del usuario */
+    display: none;
+    z-index: 1;
+}
+
+.user-menu-widget::before {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 47%;
+    top: -5px;
+    transform: rotate(45deg) translateX(-47%);
+    content: '';
+    background-color: white;
+    box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.user-menu-container {
+    font-size: .95rem;
+    display: grid;
+    /* El menú desplegable se divide en tres partes */
+    grid-template-rows: auto 47% 33%;   
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+    overflow: hidden;
+}
+
+.user-menu-container a {
+    text-decoration: none;
+}
+
+/* Submenus */
+
+.sign-login-container, .submenu-container {
+    box-sizing: border-box;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-bottom: 1px solid #aaa;
+}
+
+.sign-login-container {
+    justify-content: space-between;
+}
+
+.border-down {
+    border-bottom: 1px solid #aaa;
+}
+
+/* Botón de iniciar sesión */
+
+#login {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 35px;
+    height: 60%;
+    width: 65%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#login:hover {
+    font-size: 1.35em;
+    width: 75%;
+    height: 65%;
+}
+
+/* Botón de registrarse */
+
+.sign-up {
+    display:block;
+    margin: 0 auto;
+}
+
+.registrar:hover {
+    font-size: 1.2em;
+    color: #fc9c00;
+}
+
+.plain-link {
+    color: #777;
+}
+
+/* Opciones de los submenus */
+
+ul.submenu-container {
+    list-style-type: none;
+}
+
+ul.submenu-container > li {
+    margin: 0 1.2em;
+    height: 70%;
+    border-radius: .625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option {
+    width: 100%;
+    border-radius: inherit;
+    padding: .6em 1.1em;
+}
+
+.option:hover {
+    background-color: rgba(255, 170, 0, 0.5);
+    color: #9a6104;
+}
+
+/*
+
+submenú principal:
+
+- Mis órdenes
+- Centro de mensajes
+- Pagos
+- Cupones
+- Favoritos
+
+*/
+
+.main-option {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.main-option img {
+    padding-right: .5em;
+}
+
+
+
+/* 
+SEGUNDA PARTE DEL HEADER
+*/
+
+.container-principal-nav{
+    width: 100%;
+    height: 100%;
+}
+
+.container-principal-list{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item1{
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+}
+
+.container-principal-item {
+    padding: .625rem .9375rem;
+    border-radius: 1.875rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-principal-item:hover{
+    background-color: rgba(176, 173, 173, 0.116);
+    cursor: pointer;
+}
+
+/* MAIN */
+
+.slider {
+    display: flex;
+    background-color: #ff9900;
+    height: 250px;
+    width: 100%;
+    justify-content: center;
+    gap: 10vw;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.bienvenida {
+    color: white;
+    font-size: 1.3125em;
+}
+
+.bienvenida h2 {
+    margin: 10px;
+}
+
+/* Botón de "Comprar ahora" */
+
+.buy-now {
+    padding: .9375rem .625rem;
+    border-radius: .625rem;
+    border: none;
+}
+
+.buy-now:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.222);
+}
+
+.muestra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 30%;
+    align-items: center;
+    gap: 30px;
+}
+
+.muestra img {
+    width: 8em;
+}
+
+.carrusel-container {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 60px;
+    width: 85%;
+}
+
+.carrusel {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    background-color: white;
+    padding: 2.5rem;
+    border: .0625rem solid #dddddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón que accciona el carrusel de productos */
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 75px;
+    width: 75px;
+    transform: translateY(-50%) translateX(55%);
+    border-radius: 20px;
+    background-color: #e8e8e8;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.next:hover {
+    background-color: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.33);
+}
+
+.productos {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Card Que contiene toda la información del producto */
+.producto {
+    width: 20%;
+    height: 100%;
+    background-color: #efefef;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-content: space-around;
+    padding: 1.25rem 1.25rem 0;
+    box-sizing: border-box;
+    min-width: 12.5rem;
+}
+
+.producto:hover {
+    cursor: pointer;
+    width: 25%;
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-between;
+    padding: 1.5625rem 0;
+}
+
+.img-producto {
+    width: 100%;
+}
+
+.info-producto h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.precio {
+    font-size: 1.5rem;
+}
+
+.precio-original {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.descuento {
+    background-color: red;
+    color: white;
+    padding: .3125rem .3125rem .3125rem 0;
+    width: 30%;
+    margin-left: auto;
+}
+
